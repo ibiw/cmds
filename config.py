@@ -45,3 +45,19 @@ faz_400e = {
   "password" : "",
   "timeout" : time_out
 }
+faz_3700e_01 = {
+  "host" : "10.2.127.5",
+  "port" : "2010",
+  "sn" : "FL3K7E3R16000001",
+  "username" : "admin",
+  "password" : "",
+  "timeout" : time_out
+}
+test = {
+  "host" : "172.18.34.210",
+  "port" : "23",
+  "sn" : "FL3K7E3R16000001",
+  "username" : "admin",
+  "password" : "",
+  "timeout" : time_out
+}
