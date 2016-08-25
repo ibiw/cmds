@@ -285,7 +285,7 @@ def main():
             print("Hi there, please include '-U username'!")
             exit(1)
 
-        if args.password:
+        if args.password or args.password == '':
             password = args.password
         else:
             print("Hi there, please include '-P password'!")
@@ -295,18 +295,24 @@ def main():
 
 ## when input -d device
     if args.device:
-
-        device = args.device
-        print(device)
-        dev = globals()[args.device]   ## transfer the '-d device' to corresponding dictionary
-        print(dev)
-        host = dev['host']
-        port = dev['port']
-        username = dev['username']
-        password = dev['password']
-        timeout = dev['timeout']
-        #print(config.(locals()['device']['username']))
-        check_cmd()
+        try:
+            device = args.device
+            # print(device)
+            dev = globals()[args.device]   ## transfer the '-d device' to corresponding dictionary
+            print(dev)
+            host = dev['host']
+            port = dev['port']
+            username = dev['username']
+            password = dev['password']
+            timeout = dev['timeout']
+            #print(config.(locals()['device']['username']))
+            check_cmd()
+        except KeyError:
+            print("\nThe device %s is not defined, and the available device names in 'config.py' are:'" % device)
+            with open('config.py') as f:
+                for line in f:
+                    if re.search('{', line):
+                        print(line.split()[0])
 
 
 if __name__ == '__main__':
