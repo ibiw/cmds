@@ -1,6 +1,7 @@
 ##This is the device access information
-
+## Please keep the format when add new device
 #console 10.2.127.5
+
 time_out = 30
 
 faz_3000f_01 = {
@@ -29,6 +30,7 @@ faz_2000e_05 = {
   "password" : "",
   "timeout" : time_out
 }
+
 fmg_2000e_01 = {
   "host" : "10.2.127.5",
   "port" : "2016",
@@ -37,6 +39,16 @@ fmg_2000e_01 = {
   "password" : "",
   "timeout" : time_out
 }
+
+fmg_300e_01 = {
+  "host" : "10.2.127.5",
+  "port" : "2017",
+  "sn" : "FMG3HE3R15000001",
+  "username" : "admin",
+  "password" : "",
+  "timeout" : time_out
+}
+
 faz_400e = {
   "host" : "10.2.127.5",
   "port" : "2017",
@@ -45,6 +57,7 @@ faz_400e = {
   "password" : "",
   "timeout" : time_out
 }
+
 faz_3700e_01 = {
   "host" : "10.2.127.5",
   "port" : "2010",
